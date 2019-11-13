@@ -2,6 +2,6 @@
 
 @interface KawebCordovaPluginFileSpace : CDVPlugin
 
-// - (void) greet:(CDVInvokedUrlCommand*)command;
+- (void)getFreeDiskSpace:(CDVInvokedUrlCommand*)command;
 
 @end
