@@ -8,18 +8,7 @@
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
   </engines>
-
-  <platform name="android">
-
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="KawebCordovaPluginFileSpace">
-        <param name="android-package" value="co.uk.kaweb.cordovaplugin.filespace"/>
-      </feature>
-    </config-file>
-
-    <source-file src="src/android/KawebCordovaPluginFileSpace.java" target-dir="src/kaweb/cordovaplugin/filespace"/>
-  </platform>
-
+        
   <platform name="ios">
     
     <config-file target="config.xml" parent="/widget">
