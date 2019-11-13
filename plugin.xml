@@ -3,7 +3,7 @@
         id="co.uk.kaweb.cordova-plugin-filespace"
         version="0.7.0">
 
-  <name>Cordova File Storage Space Plugin</name>
+  <name>KawebCordovaPluginFileSpace</name>
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
@@ -12,7 +12,7 @@
   <platform name="android">
 
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="Cordova File Storage Space Plugin">
+      <feature name="KawebCordovaPluginFileSpace">
         <param name="android-package" value="co.uk.kaweb.cordovaplugin.filespace"/>
       </feature>
     </config-file>
@@ -23,7 +23,7 @@
   <platform name="ios">
     
     <config-file target="config.xml" parent="/widget">
-      <feature name="Cordova File Storage Space Plugin">
+      <feature name="KawebCordovaPluginFileSpace">
         <param name="ios-package" value="KawebCordovaPluginFileSpace" />
       </feature>
     </config-file>
