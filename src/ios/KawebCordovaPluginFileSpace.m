@@ -7,8 +7,6 @@
    */
 - (NSNumber*)getFreeDiskSpace:(NSString*)appPath
 {
-    NSLog(@"GG");
-  
     NSURL *url = [[NSURL alloc] initFileURLWithPath:NSHomeDirectory()];
     NSNumber* pNumAvail = (NSNumber*) [url resourceValuesForKeys:@[NSURLVolumeAvailableCapacityForImportantUsageKey] error:nil][NSURLVolumeAvailableCapacityForImportantUsageKey];
     
@@ -16,8 +14,8 @@
     NSNumber* pNumAvailOpportu = (NSNumber*) [url resourceValuesForKeys:@[NSURLVolumeAvailableCapacityForOpportunisticUsageKey] error:nil][NSURLVolumeAvailableCapacityForOpportunisticUsageKey];
 
     NSLog(@"Disk Space Available [ImportantUsage]: %@", pNumAvail);
-    NSLog(@"Disk Space Available [regular]: %@", pNumAvailRegular);
-    NSLog(@"Disk Space Available [Opportunistic]: %@", pNumAvailOpportu);
+    //NSLog(@"Disk Space Available [regular]: %@", pNumAvailRegular);
+   // NSLog(@"Disk Space Available [Opportunistic]: %@", pNumAvailOpportu);
  
     return pNumAvail;
 }
