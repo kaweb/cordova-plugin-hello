@@ -2,17 +2,24 @@
 
 @implementation KawebCordovaPluginFileSpace
 
-// - (void)greet:(CDVInvokedUrlCommand*)command
-// {
+  /**
+   * Get the Free Disk Space in bytes
+   */
+- (NSNumber*)getFreeDiskSpace:(NSString*)appPath
+{
+    NSLog(@"GG");
+  
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:NSHomeDirectory()];
+    NSNumber* pNumAvail = (NSNumber*) [url resourceValuesForKeys:@[NSURLVolumeAvailableCapacityForImportantUsageKey] error:nil][NSURLVolumeAvailableCapacityForImportantUsageKey];
+    
+    NSNumber* pNumAvailRegular = (NSNumber*) [url resourceValuesForKeys:@[NSURLVolumeAvailableCapacityKey] error:nil][NSURLVolumeAvailableCapacityKey];
+    NSNumber* pNumAvailOpportu = (NSNumber*) [url resourceValuesForKeys:@[NSURLVolumeAvailableCapacityForOpportunisticUsageKey] error:nil][NSURLVolumeAvailableCapacityForOpportunisticUsageKey];
 
-//     NSString* name = [[command arguments] objectAtIndex:0];
-//     NSString* msg = [NSString stringWithFormat: @"Hello, %@", name];
-
-//     CDVPluginResult* result = [CDVPluginResult
-//                                resultWithStatus:CDVCommandStatus_OK
-//                                messageAsString:msg];
-
-//     [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
-// }
+    NSLog(@"Disk Space Available [ImportantUsage]: %@", pNumAvail);
+    NSLog(@"Disk Space Available [regular]: %@", pNumAvailRegular);
+    NSLog(@"Disk Space Available [Opportunistic]: %@", pNumAvailOpportu);
+ 
+    return pNumAvail;
+}
 
 @end
