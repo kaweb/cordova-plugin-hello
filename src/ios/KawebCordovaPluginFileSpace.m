@@ -9,7 +9,7 @@
   /**
    * Get the Free Disk Space in bytes
    */
-- (NSNumber*)getFreeDiskSpace:(NSString*)appPath
+- (NSNumber*)getFreeDiskSpace:(CDVInvokedUrlCommand*)command
 {
     NSURL *url = [[NSURL alloc] initFileURLWithPath:NSHomeDirectory()];
     NSNumber* pNumAvail = (NSNumber*) [url resourceValuesForKeys:@[NSURLVolumeAvailableCapacityForImportantUsageKey] error:nil][NSURLVolumeAvailableCapacityForImportantUsageKey];
