@@ -17,7 +17,7 @@
       </feature>
     </config-file>
 
-    <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
+    <source-file src="src/android/KawebCordovaPluginFileSpace.java" target-dir="src/kaweb/cordovaplugin/filespace"/>
   </platform>
 
   <platform name="ios">
